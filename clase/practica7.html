@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+        
+    function salto_de_lineas(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+   function mostrarMensaje (mensaje){
+    document.write(mensaje);
+    salto_de_lineas();
+   }
+
+   //var AnimalAdivinar = math.round(math.random()*10)
+   //var intentos=3;
+   //var contador=1;
+   //while(contador<=intentos){  
+     //var numeroIntroducido= parseInt(prompt("ingrese el numero a adivinar 1 al 10"))
+     //if(numeroIntroducido == numeroAdivinar){
+       // alert("Adivinaste en el intento numero"+ contador+"el numero"+numeroAdivinar)
+        //break;
+     //}else{
+       // alert("perdedor")
+     //}
+     //conntar++;
+    //}
+    //alert("fin")
+
+
+
+
+
+var animales = ["perro", "gato", "pájaro", "elefante", "tigre", "serpiente", "pez", "leon", "mono", "jirafa"];
+
+var animalAdivinar = animales[Math.floor(Math.random() * animales.length)];
+
+var intentos = 2;
+var contador = 1;
+
+while (contador <= intentos) {
+    var animalIntroducido = prompt("Adivina el animal (perro, gato, pájaro, elefante, tigre, serpiente, pez, leon, mono, jirafa)");
+
+    
+    animalIntroducido = animalIntroducido.toLowerCase();
+
+    if (animalIntroducido == animalAdivinar) {
+        mostrarMensaje("¡Adivinaste en el intento número " + contador + " el animal " + animalAdivinar + "!");
+        break;
+    } else {
+        mostrarMensaje("Intento " + contador + ": Incorrecto.");
+    }
+
+    contador++;
+}
+
+mostrarMensaje("Fin del juego");
+
+
+
+</script>

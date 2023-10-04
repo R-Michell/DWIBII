@@ -1,0 +1,46 @@
+<DOCTYPE  html> 
+    <html lang="es"> 
+        <head>
+            <body> </body>
+            <meta charset="iso-8859-1">
+            <meta name="keyword">
+            <link rel="syrlesheet" href="">
+            <title>ejercicios5</title>
+        </head>
+        <body>
+            <center> <h1>Juego</h1></center>
+        </body>
+
+
+    
+    </html>
+    <script>
+        
+        function salto_de_lineas(){
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<br>")
+        }
+       function mostrarMensaje (mensaje){
+        document.write(mensaje);
+        salto_de_lineas();
+       }
+
+       var numeroAdivinar = math.round(math.random()*10)
+       var intentos=3;
+       var contador=1;
+       while(contador<=intentos){  
+         var numeroIntroducido= parseInt(prompt("ingrese el numero a adivinar 1 al 10"))
+         if(numeroIntroducido == numeroAdivinar){
+            alert("Adivinaste en el intento numero"+ contador+"el numero"+numeroAdivinar)
+            break;
+         }else{
+            alert("perdedor")
+         }
+         conntar++;
+        }
+        alert("fin")
+    
+    </script>
+
+    //realiza un juego diferente a realizar en el cual utilice las herramientas vistas

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Practica 10</h1></center>
+</body>
+</html>
+
+<script>
+function salto_de_lineas(){
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<br>")
+        }
+       function mostrarMensaje (mensaje){
+        document.write(mensaje);
+        salto_de_lineas();
+       }
+
+
+
+
+    var afirmaciones = [
+    { texto: "La Tierra es plana.", respuesta: false },
+    { texto: "El elefante es un manifero", respuesta: true },
+    { texto: "El Sol gira alrededor de la Tierra.", respuesta: false },
+    { texto: "La araña tiene huesos", respuesta: false },
+    { texto: "Los humanos tienen cinco dedos en cada mano.", respuesta: true }
+];
+
+var intentos = 2;
+var contador = 1;
+
+while (contador <= intentos) {
+    var afirmacion = afirmaciones[Math.floor(Math.random() * afirmaciones.length)];
+
+    var respuestaUsuario = prompt("Verdadero o falso: " + afirmacion.texto);
+
+
+    if (respuestaUsuario == "verdadero" && afirmacion.respuesta == true) {
+        mostrarMensaje("Correcto");
+    } else if (respuestaUsuario == "falso" && afirmacion.respuesta == false) {
+        mostrarMensaje("Correcto");
+    } else {
+        mostrarMensaje("Incorrecto, la oracion es " + (afirmacion.respuesta ? "verdadera" : "falsa"));
+    }
+
+    contador++;
+}
+
+mostrarMensaje("Fin del juego");
+</script>
